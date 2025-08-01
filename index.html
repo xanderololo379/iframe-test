@@ -1,19 +1,27 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html>
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
+  <title>Mercuryo Widget with Redirect</title>
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2487.6">
   <style type="text/css">
   </style>
-<script defer="" data-domain="tan-tomasine-58.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script><script type="text/javascript" src="https://tiiny.host/ad-script.js"></script></head>
+</head>
 <body>
   <div id="mercuryo-widget"></div>
 
   <script src="https://sandbox-widget.mrcr.io/embed.2.0.js"></script>
   <script>
-    // Call the Mercuryo widget
-    mercuryoWidget.run({ widgetId: '9baa426f-58c9-4fe1-8510-1e2f85bb6374', redirect_url: 'https://google.com', host: document.getElementById('mercuryo-widget') });
+    // Call the Mercuryo widget with required host parameter
+    mercuryoWidget.run({ 
+      widgetId: '9baa426f-58c9-4fe1-8510-1e2f85bb6374', 
+      redirect_url: 'https://google.com',
+      host: 'https://sandbox-exchange.mrcr.io',
+      container: document.getElementById('mercuryo-widget')
+    });
   </script>
 
-</body></html>
+</body>
+</html>
