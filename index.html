@@ -14,10 +14,18 @@
 
   <script src="https://sandbox-widget.mrcr.io/embed.2.0.js"></script>
   <script>
-    mercuryoWidget.run({ 
-      widgetId: '9baa426f-58c9-4fe1-8510-1e2f85bb6374', 
-      redirectUrl: 'https://google.com',
-      host: document.getElementById('mercuryo-widget')
+    // Wait for DOM to be ready
+    document.addEventListener('DOMContentLoaded', function() {
+      const widgetContainer = document.getElementById('mercuryo-widget');
+      if (widgetContainer) {
+        mercuryoWidget.run({ 
+          widgetId: '9baa426f-58c9-4fe1-8510-1e2f85bb6374', 
+          redirectUrl: 'https://google.com',
+          host: widgetContainer
+        });
+      } else {
+        console.error('Widget container not found');
+      }
     });
   </script>
 
